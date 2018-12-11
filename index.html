@@ -2,26 +2,32 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+
     <!-- Added Moment JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    
-    <title>Train Schedules</title>
+
+    <title>Train Scheduler</title>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron jumbotron-fluid bg-dark text-light text-center">
             <div class="container">
-                <h1 class="display-4">Train Schedules</h1>
+                <h1 class="display-4">Hogwarts Express Platform 9¾</h1>
+                <p class="something">King's Cross Station</p>
                 <p class="lead">A Comprehensive Directory of Train Schedules</p>
             </div>
         </div>
         <div class="card">
-            <div class="card-header bg-secondary text-light"><i class="fa fa-list-alt"></i> Current Train Schedule</div>
+            <div class="card-header bg-secondary text-light"><i class="fa fa-list-alt"></i>Current Train Schedule</div>
             <table class="table">
                 <thead>
                     <tr>
@@ -33,7 +39,7 @@
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <div id="full-member-list">
+                    <div id="full-train-list">
                 </tbody>
             </table>
         </div>
@@ -42,34 +48,37 @@
     <br>
     <div class="container">
         <div class="card">
-            <div class="card-header bg-secondary text-light"><i class="fa fa-list-alt"></i> Add Train</div>
+            <div class="card-header bg-secondary text-light"><i class="fa fa-list-alt"></i>Add Train</div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Train Name</label>
-                        <input type="text" class="form-control" id="name-input" placeholder="First Last">
+                        <input type="text" class="form-control" id="name-input" placeholder="Train Name">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Destination</label>
-                        <input type="text" class="form-control" id="role-input" placeholder="CEO">
+                        <input type="text" class="form-control" id="role-input" placeholder="Hogwarts">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="startDate-input" placeholder="01/01/2007">
+                        <input type="text" class="form-control" id="startDate-input" placeholder="HH:mm">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Frequency (min)</label>
-                        <input type="text" class="form-control" id="monthlyRate-input" placeholder="00000">
+                        <input type="text" class="form-control" id="monthlyRate-input" placeholder="00:00">
                     </div>
                     <button type="button" id="add-user" class="btn btn-secondary">Submit</button>
                 </form>
             </div>
         </div>
+
+        <!-- jQuery first, then Popper JS, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
-        <script type="text/javascript">
-        </script>
+        
+        <!-- JavaScript -->
+        <script type="text/javascript" src="assets/javascript/javascript.js"></script>
 </body>
 
 </html>

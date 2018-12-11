@@ -18,7 +18,7 @@ var totalBilled = "";
 // var randomDate = "02/23/1999";
 // var randomFormat = "DD/MM/YYYY";
 // var convertedDate = moment(randomDate, rendomFormat);
-$("#add-user").on("click", function (event) {
+$("#add-user").on("click", function(event) {
     event.preventDefault();
     console.log(name)
     console.log(role)
