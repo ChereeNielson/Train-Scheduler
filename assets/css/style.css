@@ -1,0 +1,35 @@
+html {
+
+}
+
+.container {
+    
+}
+
+.card-img-overlay {
+    font-family: 'Almendra', serif;
+}
+
+.sub-container {
+    /* this is not working */
+    /* background-image: url(/assets/images/1024x640.jpg); */
+    font-family: 'Almendra', serif;
+    /* font-family: 'Almendra SC', serif; */
+}
+
+h1.display-4 {
+    font-size: 80px;
+}
+
+p.train-station {
+    font-size: 40px;
+}
+
+p.train-schedules {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
