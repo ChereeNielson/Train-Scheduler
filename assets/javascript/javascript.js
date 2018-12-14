@@ -1,5 +1,5 @@
 // Initialize Firebase //
-var config = {
+let config = {
     apiKey: "AIzaSyAjzWICVCt8OM8QB-U-ZFFPO930amTcoz4",
     authDomain: "train-scheduler-5fdce.firebaseapp.com",
     databaseURL: "https://train-scheduler-5fdce.firebaseio.com",
@@ -10,16 +10,25 @@ var config = {
   
 firebase.initializeApp(config);
 
-var database = firebase.database();
-var name = "";
-var destination = "";
-var time = "";
-var frequency = "";
-var nextArrival = "";
-var minutesAway = "";
+// Variable to reference the database //
+let database = firebase.database();
+
+
+let name = "";
+let destination = "";
+let time = "";
+let frequency = "";
+let nextArrival = "";
+let minutesAway = "";
 // var convertedDate = moment(randomDate, rendomFormat);
 
+// Run Time //
+setInterval(function(startTime) {
+    $("#timer").html(moment().format('hh:mm a'))
+  }, 1000);
+
 $("#add-train").on("click", function(event) {
+    // Don't refresh the page //
     event.preventDefault();
     console.log(name);
     console.log(destination);
