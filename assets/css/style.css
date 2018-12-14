@@ -6,20 +6,57 @@ html {
     
 }
 
+h1.card-title {
+    font-size: 90px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000080, 0 0 40px #000080, 0 0 50px #000080, 0 0 60px #000080, 0 0 70px #000080;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+/* h1.card-title {
+    font-family: 'Mountains of Christmas', cursive;
+    color: #000080;
+    font-size: 80px;
+    font-weight: bold;
+} */
+
 .card-img-overlay {
-    font-family: 'Almendra', serif;
-    color: #0047ab;
+    font-family: 'Mountains of Christmas', cursive;
+    /* font-family: 'Almendra', serif; */
+    color: #000080;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p.card-text {
+    font-family: 'Mountains of Christmas', cursive;
+    color: #000080;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Mountains of Christmas', cursive;
+    color: #000080;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .sub-container {
-    /* this is not working */
-    /* background-image: url(/assets/images/1024x640.jpg); */
-    font-family: 'Almendra', serif;
+    font-family: 'Mountains of Christmas', cursive;
+    /* font-family: 'Almendra', serif; */
     /* font-family: 'Almendra SC', serif; */
-}
-
-h1.display-4 {
-    font-size: 80px;
 }
 
 p.train-station {

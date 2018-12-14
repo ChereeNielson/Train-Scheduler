@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 // Variable to reference the database //
 let database = firebase.database();
 
-
+// Global variables that link to their $counterparts //
 let name = "";
 let destination = "";
 let time = "";
@@ -36,6 +36,8 @@ $("#add-train").on("click", function(event) {
     console.log(frequency);
     console.log(nextArrival);
     console.log(minutesAway);
+    
+    // Store and retrieve the most recent train information //
     name = $("#name-input").val().trim();
     destination = $("#destination-input").val().trim();
     time = $("#time-input").val().trim();
