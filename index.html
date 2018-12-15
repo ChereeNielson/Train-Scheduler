@@ -41,7 +41,7 @@
             <div class="card-img-overlay">
                 <h1 class="card-title">Candy Cane Express</h1>
                 <!-- <h1 class="card-title">Hogwarts Express Platform 9¾</h1> -->
-                <p class="card-text">North Pole Station</p>
+                <p class="train-station">North Pole Station</p>
                 <!-- <p class="card-text">King's Cross Station</p> -->
                 <!-- <p class="card-text">A Comprehensive Directory of Train Schedules</p> -->
                 <h3>Current Time: <span id="timer"></span></h3>
@@ -56,7 +56,7 @@
         <br>
         <div class="container px-0">
             <div class="card mb-3">
-                <div class="card-header rounded bg-secondary text-white font-weight-bold"><i class="fa fa-list-alt"></i>Current Train Schedule</div>
+                <div class="card-header rounded bg-secondary text-white font-weight-bold">Current Train Schedule</div>
                 <div class="card-body">
                     <table class="table table-hover" id="train-table">
                         <thead>
@@ -71,15 +71,12 @@
                         </thead>
                         <tbody>
                         </tbody>
-                        <!-- <tbody id="tableBody">
-                        <div id="full-train-list"> -->
-                        <!-- </tbody> -->
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="container px-0">
         <div class="card mb-3">
             <div class="card-header rounded bg-secondary text-white font-weight-bold">Add New Train Information</div>
@@ -87,26 +84,27 @@
                 <form>
                     <div class="form-group">
                         <label for="name-input" class="font-weight-bold">Train Name</label>
-                        <input type="text" class="form-control" id="name-input" placeholder="Train Name">
+                        <input type="text" class="form-control" id="name-input" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="destination-input" class="font-weight-bold">Destination</label>
-                        <input type="text" class="form-control" id="destination-input" placeholder="North Pole">
+                        <input type="text" class="form-control" id="destination-input">
                     </div>
                     <div class="form-group">
-                        <label for="time-input" class="font-weight-bold">First Train Time (HH:mm - military time)</label>
-                        <input type="text" class="form-control" id="time-input" placeholder="HH:mm">
+                        <label for="firstTime-input" class="font-weight-bold">First Train Time (HH:mm - military time)</label>
+                        <input data-format="hh:mm" type="text" class="form-control" id="firstTime-input">
                     </div>
                     <div class="form-group">
                         <label for="frequency-input" class="font-weight-bold">Frequency (min)</label>
-                        <input type="text" class="form-control" id="frequency-input" placeholder="00:00">
+                        <input type="number" class="form-control" id="frequency-input">
                     </div>
                     <button type="button" id="add-train" class="btn btn-secondary">Submit</button>
                 </form>
             </div>
         </div>
-
-        <!-- JavaScript -->
-        <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+    </div>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
 </body>
+
 </html>

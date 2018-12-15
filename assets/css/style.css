@@ -20,13 +20,13 @@ h1.card-title {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000080, 0 0 40px #000080, 0 0 50px #000080, 0 0 60px #000080, 0 0 70px #000080;
     }
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      text-shadow: 0 0 20px #fff, 0 0 30px #f5f3ce, 0 0 40px #f5f3ce, 0 0 50px #f5f3ce, 0 0 60px #f5f3ce, 0 0 70px #f5f3ce, 0 0 80px #f5f3ce;
     }
   }
 
 /* h1.card-title {
     font-family: 'Mountains of Christmas', cursive;
-    color: #000080;
+    color: #ff4da6;
     font-size: 80px;
     font-weight: bold;
 } */
@@ -39,7 +39,7 @@ h1.card-title {
     font-weight: bold;
 }
 
-p.card-text {
+p.train-station {
     font-family: 'Mountains of Christmas', cursive;
     color: #000080;
     font-size: 70px;
@@ -48,8 +48,8 @@ p.card-text {
 
 h3 {
     font-family: 'Mountains of Christmas', cursive;
-    color: #000080;
-    font-size: 50px;
+    color: white;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -57,17 +57,5 @@ h3 {
     font-family: 'Mountains of Christmas', cursive;
     /* font-family: 'Almendra', serif; */
     /* font-family: 'Almendra SC', serif; */
-}
-
-p.train-station {
-    font-size: 40px;
-}
-
-p.train-schedules {
-    font-size: 30px;
-}
-
-h4 {
-    font-size: 40px;
 }
 
