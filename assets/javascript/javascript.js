@@ -36,8 +36,6 @@ $("#add-train").on("click", function(event) {
     let destination = $("#destination-input").val().trim();
     let firstTime = $("#firstTime-input").val().trim();
     let frequency = $("#frequency-input").val().trim();
-    // nextArrival = 0;
-    // minutesAway = 0;
 
     // Provide initial data to your Firebase database (.set replaces old data) //
     let trainInfo = {
@@ -45,8 +43,6 @@ $("#add-train").on("click", function(event) {
         trainDestination: destination,
         firstTrainTime: firstTime,
         trainFrequency: frequency,
-        // nextArrival: nextArrival,
-        // minutesAway: minutesAway,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     };
     // Push to add the most recent train info to browser //
@@ -71,10 +67,10 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     let destination = childSnapshot.val().trainDestination;
     let firstTime = childSnapshot.val().firstTrainTime;
     let frequency = childSnapshot.val().trainFrequency;
-    console.log(childSnapshot.val().name);
-    console.log(childSnapshot.val().destination);
-    console.log(childSnapshot.val().firstTime);
-    console.log(childSnapshot.val().frequency);
+    console.log(childSnapshot.val().trainName);
+    console.log(childSnapshot.val().trainDestination);
+    console.log(childSnapshot.val().firstTrainTime);
+    console.log(childSnapshot.val().trainFrequency);
     // console.log(childSnapshot.val().nextArrival);
     // console.log(childSnapshot.val().minutesAway);
 
@@ -113,6 +109,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log("Errors handled: " + errorObject.code);
 });
 
+// NEED TO FIGURE OUT HOW TO KEEP TRAIN INFO DELETED //
 // Delete Train on-click function //
 $("body").on("click", ".fa-trash-alt", function() {
     $(this).closest("tr").remove(); 
@@ -129,10 +126,10 @@ function timeUpdater() {
     let destination = childSnapshot.val().trainDestination;
     let firstTime = childSnapshot.val().firstTrainTime;
     let frequency = childSnapshot.val().trainFrequency;
-    console.log(childSnapshot.val().name);
-    console.log(childSnapshot.val().destination);
-    console.log(childSnapshot.val().firstTime);
-    console.log(childSnapshot.val().frequency);
+    console.log(childSnapshot.val().trainName);
+    console.log(childSnapshot.val().trainDestination);
+    console.log(childSnapshot.val().firstTrainTime);
+    console.log(childSnapshot.val().trainFrequency);
 
     // First Time (pushed back 1 year to make sure it comes before current time) //
     let firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
@@ -162,34 +159,9 @@ function timeUpdater() {
     console.log("ARRIVAL TIME: " + moment(nextArrival).format("hh:mm a"));
 
     // Append the New Train Information to the Current Train Schedule List //
-    $("#train-table > tbody").append("<tr><td>" + '<i class="fas fa-trash-alt" id="trashcan" aria-hidden="true"></i>' + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
+    $("#train-table > tbody").append("<tr><td>" + '<i class="fas fa-trash-alt" aria-hidden="true"></i>' + "</td><td>" + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
     })
 };
 
 setInterval(timeUpdater, 5000);
-
-
-
-// $("#name-input, #destination-input, #firstTime-input, #frequency-input").val('');
-
-    // $("#name-input").text(snapshot.val().name);
-        // $("#role-input").text(snapshot.val().role);
-        // $("#startDate-input").text(snapshot.val().startDate);
-        // $("#monthsWorked-input").text(snapshot.val().monthsWorked);
-        // $("#monthlyRate-input").text(snapshot.val().monthlyRate);
-        // $("#totalBilled-input").text(snapshot.val().totalBilled);
-   
-    // $("#tableBody").append(
-    //     "<tr class='well'><td class='train-name'> " + childSnapshot.val().name +
-    //     " </td><td class='train-destination'> " + childSnapshot.val().destination +
-    //     " </td><td class='train-firstTime'> " + childSnapshot.val().firstTime +
-    //     " </td><td class='train-frequency'> " + childSnapshot.val().frequency +
-    //     " </td><td class='train-nextArrival'> " + childSnapshot.val().nextArrival +
-    //     " </td><td class='train-minutesAway'> " + childSnapshot.val().minutesAway +
-    //     " </td></tr>");
-    
-
-
-
-
