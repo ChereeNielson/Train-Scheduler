@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
 
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
@@ -24,14 +25,10 @@
 
     <!-- Google Fonts Links -->
     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Almendra" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Almendra+SC" rel="stylesheet"> -->
 
     <!-- Font Awesome Links -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <!-- <script src="https://use.fontawesome.com/8c1fdea402.js"></script> -->
 
-    <title>Train Scheduler</title>
 </head>
 
 <body>
@@ -75,31 +72,32 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container px-0">
-        <div class="card mb-3">
-            <div class="card-header rounded bg-secondary text-white font-weight-bold">Add New Train Information</div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="name-input" class="font-weight-bold">Train Name</label>
-                        <input type="text" class="form-control" id="name-input" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination-input" class="font-weight-bold">Destination</label>
-                        <input type="text" class="form-control" id="destination-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="firstTime-input" class="font-weight-bold">First Train Time (HH:mm - military time)</label>
-                        <input data-format="hh:mm" type="text" class="form-control" id="firstTime-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="frequency-input" class="font-weight-bold">Frequency (min)</label>
-                        <input type="number" class="form-control" id="frequency-input">
-                    </div>
-                    <button type="button" id="add-train" class="btn btn-secondary">Submit</button>
-                </form>
+        <div class="container px-0">
+            <div class="card mb-3">
+                <div class="card-header rounded bg-secondary text-white font-weight-bold">Add New Train Information</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name-input" class="font-weight-bold">Train Name</label>
+                            <input type="text" class="form-control" id="name-input" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination-input" class="font-weight-bold">Destination</label>
+                            <input type="text" class="form-control" id="destination-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstTime-input" class="font-weight-bold">First Train Time (HH:mm - military
+                                time)</label>
+                            <input data-format="hh:mm" type="text" class="form-control" id="firstTime-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency-input" class="font-weight-bold">Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequency-input">
+                        </div>
+                        <button type="button" id="add-train" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
