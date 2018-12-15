@@ -102,19 +102,33 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log("ARRIVAL TIME: " + moment(nextArrival).format("hh:mm a"));
 
     // Append the New Train Information to the Current Train Schedule List //
-    $("#train-table > tbody").append("<tr><td>" + '<i class="fas fa-trash-alt" id="trashcan" aria-hidden="true"></i>' + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
+    $("#train-table > tbody").append("<tr><td>" + '<i class="fas fa-trash-alt" id="trashcan" aria-hidden="true"></i>' + "</td><td>" + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
+    // let trashcan = addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     let id = e.target.parentElement.getAttribute("data-id");
+    //     database.collection("train-table").doc(id).delete();
+    // })
+    
     // Log any Errors to Console //
 }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
 
-// NEED TO FIGURE OUT HOW TO KEEP TRAIN INFO DELETED //
+// NEED TO FIGURE OUT HOW TO KEEP TRAIN INFO DELETED //  onDelete()
+// function delete_row(trainInfo) { 
+//     let key = document.getElementById(row).row.childData;
+//     firebase.database().ref().child('users/' + childSnapshot + '/').remove();
+//     reload_page();
+// }
+
 // Delete Train on-click function //
 $("body").on("click", ".fa-trash-alt", function() {
     $(this).closest("tr").remove(); 
     alert("Confirm Delete");
   });
+
+
 
 // Update Minutes Away by Triggering Change in Firebase Child //
 function timeUpdater() {
