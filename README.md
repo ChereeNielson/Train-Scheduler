@@ -1,28 +1,31 @@
-# Train Schedule
+# Train Scheduler #
 
-### Overview
+## Overview ##
 
-In this assignment, the objective was to create a train schedule application that incorporates Firebase to host arrival and departure data. My app retrieves and manipulates the data with Moment.js. This website provides up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.
+Application accepts user input to add new train name, start time and frequency of schedule. Displays schedule in repeating table with next arrival based on current time and frequency of train stops. Stores train info in Firebase for data persistence and retreives information from database on load. User can delete train information from schedule and database with click of button.
 
-### Requirements
+## How users can get started with this project ## 
 
-* App must suit these basic specs:
-  * When adding trains, administrators should be able to submit the following:
-    * Train Name
-    * Destination 
-    * First Train Time -- in military time
-    * Frequency -- in minutes
-  * Calculate when the next train will arrive; relative to the current time.
-  * Users from many different machines must be able to view same train times.
+1. **[Open the Train Scheduler](https://chereenielson.github.io/Train-Scheduler/)**.
+    - All train data in `Firebase` is pushed to the train schedule table.
 
-### Added Functionality
+2. **Add a train of your own**.
+    - At the touch of a button, a modal form will appear, allowing you to enter a new train. 
 
-* Form Validation for correct time input
+3. **Lookup your train**!
+    - Watch the train schedule update to display your entries.
 
+## Technology ##
++ Javascript
++ jQuery
++ HTML5
++ CSS
++ Firebase
++ Moment.js
 
-### Link
-[Train-Schedule](https://chereenielson.github.io/Train-Scheduler/)
+## Where users can get help with this project ##
 
-### Example Site
+If you have any questions about this Train Scheduler project, initiate a new pull request and leave a comment.
 
-![Train-Schedule](assets/images/train-schedule.png)
+## Who maintains this project ## 
+This project is lovingly (and casually) maintained by me, @[ChereeNielson](https://github.com/ChereeNielson). Thanks for checking it out.

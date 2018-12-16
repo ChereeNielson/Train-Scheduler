@@ -164,7 +164,7 @@ let remove = function(e){
     console.log(key)
     console.log(firebase.database());
     
-    if(confirm('Are you sure?')){
+    if(confirm('Confirm Delete')){
       database.ref('train/' + key).remove();
     }
 }
